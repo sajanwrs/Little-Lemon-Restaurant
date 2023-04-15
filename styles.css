@@ -20,12 +20,12 @@ h2{
     display: block;
 }
 
-span {
+h2 > span {
     color: #FA9F42;
     font-size: 0.75em;
 }
 
-#copyright{
-    padding-top: 12px;
+#copyright {
     font-size: 0.75em;
+    padding: 12px 0 0 0;
 }

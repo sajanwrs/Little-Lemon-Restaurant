@@ -1,10 +1,12 @@
 body {
   background-color: #edefee;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  margin-left: 5%;
-  margin-right: 5%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  max-height: auto;
+  display: grid;
 }
 
 h1 {
@@ -15,15 +17,9 @@ h2 {
   font-size: 2rem;
 }
 
-header > img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 #logo {
   width: 80%;
-  padding: 5% 10% 5% 10%;
+  padding: 5% 10%;
 }
 
 nav ul {
@@ -60,27 +56,46 @@ section {
   display: flex;
 }
 
-article {
+/* article {
   flex: 1;
-}
+} */
 
 #banner {
   padding: 1rem;
   background-image: url(/img/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   border-radius: 10px;
   color: white;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+#banner-head {
+  font-size: 2vw;
   text-align: left;
 }
 
-#container {
-  padding: 1rem;
+/* Need to be fixed */
+#section-cont {
+  border-radius: 10px;
+  background-color: bisque;
+  padding: 2rem;
+  margin: 0.5rem;
 }
 
-/* need fixing*/
+#section-cont:first-of-type {
+  margin-left: 0;
+}
+
+#section-cont:last-of-type {
+  margin-right: 0;
+}
+
 #container-img {
-  max-height: 200px;
+  height: 200px;
+  width: 300px;
 }
 
 article a {

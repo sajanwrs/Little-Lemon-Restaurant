@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Little Lemon</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="og:title" content="Our Menu" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="logo.png" />
-    <meta property="og:url" content="https://littlelemon/" />
-    <meta
-      property="og:description"
-      content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."
-    />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Little Lemon" />
+  <title>Little Lemon</title>
+  <meta property="og:title" content="Our Menu" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:url" content="https://littlelemon" />
+  <meta
+  property="og:description"
+  content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."
+  />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Little Lemon" />
 
-    <!--Link to CSS-->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+  <!--Link to CSS-->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
     <header>
-      <img src="logo.png" />
+      <div>
+        <img src="img/logo.png" id="logo" />
+      </div>
     </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+      </ul>
+    </nav>
     <main>
-      <h1>About</h1>
-      <!--Used Muted attribute to mute the video by default-->
-      <video width="320" height="240" controls muted>
-        <source src="video.mp4" type="video/mp4" />
-      </video>
-      <p>
-        Little Lemon is a family-owned Mediterranean restaurant, focused on
-        traditional recipes served with a modern twist.
-      </p>
-      <audio loop controls>
-        <source src="music.ogg" type="audio/ogg" />
-      </audio>
+      <div class="about-wrapper">
+        <div class="about-logo">
+          <img src="img/about-logo.png">
+        </div>
+        <div class="about-text">
+          <p>
+            Based in Chicago, Illinois, Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12–15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day.
+
+            Little Lemon is owned by two Italian brothers, Mario and Adrian, who moved to the United States to pursue their shared dream of owning a restaurant. To craft the menu, Mario relies on family recipes and his experience as a chef in Italy. Adrian does all the marketing for the restaurant and led the effort to expand the menu beyond classic Italian to incorporate additional cuisines from the Mediterranean region.
+          </p>
+        </div>
+      </div>
     </main>
     <footer>
-      <p id="copyright">Copyright Little Lemon</p>
+      <div class="footer-logo">
+        <img src="img/logo_footer.png" />
+      </div>
+      <div>
+        <p id="copyright"><span>&#169;</span>Little Lemon</p>
+      </div>a
     </footer>
-  </body>
+  </div>
+</body>
 </html>

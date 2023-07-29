@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -6,10 +9,11 @@ body {
 }
 
 .container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  max-width: 50vw;
+  max-width: 55vw;
   justify-content: center;
 }
 
@@ -22,7 +26,7 @@ h2 {
 }
 
 #logo {
-  width: 80%;
+  width: 100%;
   padding: 5% 10%;
 }
 
@@ -60,9 +64,14 @@ section {
   display: flex;
 }
 
+section.card-container{
+  margin: 0 auto;
+  overflow: auto;
+}
+
 #banner {
   padding: 1rem;
-  background-image: url(/img/banner.png);
+  background-image: url("../img/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -77,25 +86,40 @@ section {
   text-align: left;
 }
 
+.card-container{
+  width: 100%;
+  display: grid;
+  grid-auto-columns: 33%;
+  grid-auto-flow: column;
+  gap: 5px;
+  padding-bottom: 2rem;
+}
+
 #section-cont {
   border-radius: 10px;
   background-color: bisque;
   padding: 2rem;
   margin: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  overflow: auto;
 }
 
-#section-cont:first-of-type {
+#section-cont h2{
+  text-align: center;
+}
+
+/*To remove left-right margin*/
+/*#section-cont:first-of-type {
   margin-left: 0;
 }
 
 #section-cont:last-of-type {
   margin-right: 0;
-}
+}*/
 
 #container-img {
-  height: 200px;
-  width: 350px;
+  height: 40%;
+  width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -127,7 +151,7 @@ article a:hover {
 
 footer {
   display: flex;
-  padding-top: 3rem;
+  padding: 3rem;
 }
 
 footer div {
@@ -143,4 +167,119 @@ footer div {
   font-size: 1rem;
   font-weight: bold;
   text-align: end;
+}
+
+main.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  padding: 1.5rem;
+}
+
+.main-container h1{
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: underline;
+  color: #495e57;
+}
+
+form{
+  display: grid;
+  border: 2px solid white;
+  padding: 40px;
+  margin: auto;
+}
+
+label, input, button{
+  width: 100%;
+  font-family: monospace;
+  box-sizing: border-box;   /*  To contain input fields*/ 
+}
+
+form label{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+form input{
+  padding: 0.5rem;
+}
+
+.form-element{
+  padding: 5px;
+  margin-top: 0.7rem;
+}
+
+.submit-btn{
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  
+}
+
+.submit-btn:hover{
+  background-color: #ffbb6a;
+  border: 2px solid white;
+  color: white;
+}
+
+.sign-up-form{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.menu-container{
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.menu{
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  background-color: bisque;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#menu-container-img{
+  width: 30%;
+  height: 15%;
+
+}
+
+.about-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.about-text, .about-logo{
+  width: 50%;
+}
+
+.about-text{
+  background-color: #ffe4c4;
+  padding: 1.5rem;
+  white-space: pre-wrap;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.about-logo{
+  background-color: #e6e6e6;
+  padding: 0.5rem;
+  width: 40%;
+  height: auto;
 }

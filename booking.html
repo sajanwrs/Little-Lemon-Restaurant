@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en_US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Little Lemon</title>
-    <meta property="og:title" content="Our Menu" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="logo.png" />
-    <meta property="og:url" content="https://littlelemon" />
-    <meta
-      property="og:description"
-      content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."
-    />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Little Lemon" />
+  <title>Little Lemon</title>
+  <meta property="og:title" content="Our Menu" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:url" content="https://littlelemon" />
+  <meta
+  property="og:description"
+  content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."
+  />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Little Lemon" />
 
-    <!--Link to CSS-->
-    <link rel="stylesheet" href="/css/styles.css" />
-  </head>
-  <body>
+  <!--Link to CSS-->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
     <header>
       <div>
-        <img src="/img/logo.png" id="logo" />
+        <img src="img/logo.png" id="logo" />
       </div>
     </header>
     <nav>
@@ -33,39 +34,39 @@
         <li><a href="signin.html">Sign In</a></li>
       </ul>
     </nav>
-    <main>
+    <main class ="main-container">
       <h1>Book a Table</h1>
       <form method="POST">
-        <div>
+        <div class="form-element">
           <label for="user_email">Email Address</label>
           <input type="email" id="user_email" name="user_email" required />
         </div>
-        <div>
+        <div class="form-element">
           <label for="booking_date">Booking Date</label>
           <input type="date" id="booking_date" name="booking_date" />
         </div>
-        <div>
+        <div class="form-element">
           <label for="booking_people">Number of People</label>
           <input
-            type="range"
-            id="booking_people"
-            name="booking_people"
-            min="1"
-            max="10"
-            value="4"
-            oninput="this.nextElementSibling.value = this.value
-            "
+          type="range"
+          id="booking_people"
+          name="booking_people"
+          min="1"
+          max="10"
+          value="4"
+          oninput="this.nextElementSibling.value = this.value
+          "
           />
           <!--Used JS to update the slider value-->
           <output>4</output>
         </div>
-        <div>
+        <div class="form-element">
           <label for="booking_location">Location</label>
           <!--Added list attribute to allow the choice for multiple locations from the list-->
           <input
-            id="booking_location"
-            name="booking_location"
-            list="locations"
+          id="booking_location"
+          name="booking_location"
+          list="locations"
           />
 
           <!--Used Datalist to allow expansion of the locations in the future. Also allows user input to search the list-->
@@ -74,20 +75,23 @@
             <option value="Uptown"></option>
           </datalist>
         </div>
-        <div>
+        <div class="form-element">
           <input type="checkbox" id="agree" name="agree" required />
           <label for="checkbox">I agree to the cancellation policy</label>
         </div>
-        <button type="submit">Book Now</button>
+        <div class="form-element">
+          <button type="submit" class="submit-btn">Book Now</button>
+        </div>
       </form>
     </main>
     <footer>
-      <div>
+      <div class="footer-logo">
         <img src="img/logo_footer.png" />
       </div>
       <div>
-        <p id="copyright">Copyright Little Lemon</p>
+        <p id="copyright"><span>&#169;</span>Little Lemon</p>
       </div>
     </footer>
-  </body>
+  </div>
+</body>
 </html>
